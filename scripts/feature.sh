@@ -10,7 +10,7 @@ fi
 FEATURE_NAME=$1
 FEATURE_DIR="features/$FEATURE_NAME"
 FEATURE_FILE="$FEATURE_DIR/$FEATURE_NAME.controller.js"
-ROUTER_FILE="$FEATURE_DIR/$FEATURE_NAME.router.js"
+ROUTER_FILE="$FEATURE_DIR/$FEATURE_NAME.routes.js"
 ROUTES_INDEX_FILE="routes/index.js"
 
 # Create the feature directory
