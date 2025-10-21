@@ -23,8 +23,8 @@ When you generate a feature (e.g. `auth`), it creates:
 ```
 features/
 └── auth/
-├── auth.controller.js
-└── auth.routes.js
+    ├── auth.controller.js
+    └── auth.routes.js
 ```
 
 
@@ -44,13 +44,13 @@ routes/index.js
 
 Make sure your project contains the following:
 
-- `make-feature.sh` → the Bash script that scaffolds the feature
-- `package.json` with a name like `"bash-cli"` (or whatever you prefer)
+- `feature.sh` → the Bash script that scaffolds the feature
+- `package.json` with a name like `"my-cli"` (or whatever you prefer)
 
 ### 2. ✅ Make the Script Executable
 
 ```bash
-chmod +x make-feature.sh
+chmod +x feature.sh
 ````
 
 ---
@@ -65,7 +65,7 @@ npm pack
 
 This will generate a `.tgz` file:
 
-bash-cli-1.0.0.tgz
+my-cli-1.0.0.tgz
 
 ---
 
@@ -74,9 +74,9 @@ bash-cli-1.0.0.tgz
 Move or copy the `.tgz` file to your project:
 
 ```bash
-cp bash-cli-1.0.0.tgz /path/to/your/project/
+cp my-cli-1.0.0.tgz /path/to/your/project/
 cd /path/to/your/project
-npm install ./bash-cli-1.0.0.tgz
+npm install ./my-cli-1.0.0.tgz
 ```
 
 ---
@@ -86,13 +86,13 @@ npm install ./bash-cli-1.0.0.tgz
 Now you can generate a feature using `npx`:
 
 ```bash
-npx bash-cli make-feature.sh <feature-name>
+npx mycli feature.sh <feature-name>
 ```
 
 #### Example:
 
 ```bash
-npx bash-cli make-feature.sh auth
+npx mycli feature.sh auth
 ```
 
 This will:
@@ -111,7 +111,7 @@ If you’re done using the CLI:
 
 ```bash
 npm uninstall bash-cli
-rm bash-cli-*.tgz
+rm my-cli-*.tgz
 ```
 
 ---
@@ -123,14 +123,14 @@ rm bash-cli-*.tgz
 npm pack
 
 # Step 2: Move it to your target project
-mv bash-cli-1.0.0.tgz ../my-app/
+mv my-cli-1.0.0.tgz ../my-app/
 
 # Step 3: Install it
 cd ../my-app
-npm install ./bash-cli-1.0.0.tgz
+npm install ./my-cli-1.0.0.tgz
 
 # Step 4: Use it to create a feature
-npx bash-cli make-feature.sh gallery
+npx my-cli feature.sh gallery
 ```
 
 ---
@@ -140,7 +140,7 @@ npx bash-cli make-feature.sh gallery
 After running:
 
 ```bash
-npx bash-cli make-feature.sh posts
+npx mycli feature.sh posts
 ```
 
 Your app will look like:

@@ -3,7 +3,7 @@
 # Check if argument is provided
 if [ -z "$1" ]; then
   echo "❌ Error: No feature name provided."
-  echo "Usage: ./make-feature.sh <feature-name>"
+  echo "Usage: ./feature.sh <feature-name>"
   exit 1
 fi
 
